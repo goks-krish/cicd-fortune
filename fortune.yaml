@@ -42,3 +42,4 @@ spec:
         image: gokskrish/fortune-ui
         ports:
         - containerPort: 4200
+        
