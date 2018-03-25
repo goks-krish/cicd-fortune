@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: frontend
   labels:
-    app: fortune
+    app: guestbook
     tier: frontend
 spec:
   type: LoadBalancer
@@ -11,6 +11,9 @@ spec:
   - name: server
     port: 8080
     targetPort: 8080
+  - name: ui
+    port: 4200
+    targetPort: 4200
   selector:
     app: fortune
     tier: frontend
@@ -35,6 +38,8 @@ spec:
         image: gokskrish/fortune
         ports:
         - containerPort: 8080
----
-
+      - name: fortune-ui
+        image: gokskrish/fortune-ui
+        ports:
+        - containerPort: 4200
         
