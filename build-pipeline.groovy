@@ -6,7 +6,7 @@ node() {
     stage('Download Fortune Sources') { 
         sh "rm -rf *"
         echo "1. Download Sources for Server"
-        sh "git clone https://github.com/goks-krish/fortune.git"
+        sh "git clone https://github.com/gokskrish/fortune.git"
     }
 
     stage('Run Code Analysis') { 
@@ -41,7 +41,7 @@ node() {
     
     stage('Download Fortune-UI Sources') { 
         echo "6. Download Sources for UI"
-        sh "git clone https://github.com/goks-krish/fortune-ui.git"
+        sh "git clone https://github.com/gokskrish/fortune-ui.git"
     }
     
     stage('Build Docker for UI') { 
